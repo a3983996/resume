@@ -12,7 +12,6 @@ async function getInpu() {
 
   let url =
     "https://www.googleapis.com/youtube/v3/search" +
-    "?key=AIzaSyCiCtmO4qtfhbaV4X3PvcmlP4Z5Sg_OQPc" +
     "&part=snippet" +
     "&type=video" +
     "&maxResults=12" +
