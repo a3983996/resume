@@ -15,7 +15,7 @@ async function getInpu() {
     "?key=AIzaSyCiCtmO4qtfhbaV4X3PvcmlP4Z5Sg_OQPc" +
     "&part=snippet" +
     "&type=video" +
-    "&maxResults=5" +
+    "&maxResults=12" +
     "&safeSearch=strict" +
     "&q=" +
     inpu;
