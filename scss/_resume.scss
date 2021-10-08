@@ -1,0 +1,35 @@
+.resume{
+    
+    table{
+        border-top: 1px solid black;
+        margin: 2%;
+        word-break: break-all;
+        max-width: 600px;
+        tr{
+            border-bottom: 1px solid black;
+            th{
+                padding: 1rem;
+                font-weight: bold;
+                white-space: nowrap;
+            }   
+            td{
+                padding: 1rem;
+                display: flex;
+                flex-wrap: wrap;
+                span{
+                    white-space: nowrap;
+                    display: flex;
+                    align-items: center;
+                    margin-right: 0.5rem;
+                    font-weight: bold;
+                    font-family: Arial, Helvetica, sans-serif;
+                    i{
+                        margin-left: 0.1rem;
+                    }
+                }
+            }
+        }
+        
+    }
+
+}

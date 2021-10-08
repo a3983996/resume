@@ -1,0 +1,275 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol,
+ul {
+    list-style: none;
+}
+blockquote,
+q {
+    quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: "";
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: gray;
+}
+.wrap {
+    background-color: white;
+}
+.header {
+    background-color: #aaaaaa;
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 20px 5px 20px;
+}
+.header .search {
+    display: flex;
+    width: 50%;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.header .search .seaIn {
+    width: 100%;
+    height: 30px;
+    border: none;
+    background-color: #eeeeee;
+    outline: none;
+}
+.header .search .enter {
+    min-width: 60px;
+    height: 30px;
+    background: url(../image/search.png) no-repeat center center;
+    background-size: 20px;
+    background-color: #dddddd;
+    border: none;
+}
+.header .search .enter:hover {
+    cursor: pointer;
+    background-color: #cccccc;
+}
+.header ul {
+    display: flex;
+    justify-content: space-between;
+}
+.header ul li {
+    margin-right: 20px;
+    padding: 5px;
+}
+.header ul li:hover {
+    background-color: #eeeeee;
+    cursor: pointer;
+    border-radius: 3px;
+}
+.header ul li img {
+    width: 30px;
+}
+
+.header .logo a {
+    width: 100px;
+    height: 44px;
+    background-size: cover;
+    background-image: url(../image/youtube.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: block;
+    text-indent: 101%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.content {
+    background-color: #cccccc;
+}
+.container1 {
+    padding: 20px;
+    margin: 0 auto;
+}
+.content ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+.content ul li {
+    margin-bottom: 20px;
+    width: 25%;
+    display: flex;
+    justify-content: center;
+}
+.content ul li img {
+    max-width: 100%;
+    height: auto;
+}
+
+.list {
+    width: 30px;
+    display: none;
+}
+
+@media (max-width: 1439px) {
+    .content ul li {
+        width: 33%;
+    }
+}
+@media (max-width: 1149px) {
+    .content ul li {
+        width: 50%;
+    }
+}
+@media (max-width: 767px) {
+    .content ul li {
+        width: 100%;
+    }
+}
+
+@media (max-width: 475px) {
+    .header .search .seaIn {
+        display: none;
+    }
+    .header .search .enter {
+        background-size: 30px;
+        background-color: #aaaaaa;
+        min-width: auto;
+        width: 40px;
+        height: 40px;
+    }
+    .header .search {
+        justify-content: flex-end;
+    }
+    .header .search .enter:hover {
+        background-color: #eeeeee;
+        border-radius: 3px;
+    }
+}
+
+@media (max-width: 413px) {
+    .header ul {
+        display: none;
+    }
+    .list {
+        display: block;
+    }
+}
+footer p{
+    display: block;
+    height: 300px;
+}

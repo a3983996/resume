@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+    <script src="js/index.js"></script>
+    <title>去背網</title>
+</head>
+
+<body>
+    
+    <div class="wrap">
+        
+
+        <div class="header">
+            <h1 class="logo"><a href="#">去背</a></h1>
+            <div class="in_pic">
+                <form action="/somewhere/to/upload" enctype="multipart/form-data" class="form-in">
+                    <div class="item1">
+                        <label for="r">R:</label>
+                        <input type="number" min="0" max="255" value="0" id="r"><br>
+                        <label for="g">G:</label>
+                        <input type="number" min="0" max="255" value="0" id="g"><br>
+                        <label for="b">B:</label>
+                        <input type="number" min="0" max="255" value="0" id="b"><br>
+                        <label for="a">A:</label>
+                        <input type="number" min="0" max="255" value="255" id="a"><br>
+                        
+                    </div>
+                    
+                    <div class="item1">
+                        <label for="r1">->R:</label>
+                        <input type="number" min="0" max="255" value="255" id="r1"><br>
+                        <label for="g1">->G:</label>
+                        <input type="number" min="0" max="255" value="255" id="g1"><br>
+                        <label for="b1">->B:</label>
+                        <input type="number" min="0" max="255" value="255" id="b1"><br>
+                        <label for="a1">->A:</label>
+                        <input type="number" min="0" max="255" value="0" id="a1"><br>
+                        
+                    </div>
+                    <input type="file" id="progressbarTWInput" accept="image/gif, image/jpeg, image/png">
+                    
+                    
+                 </form>
+                 
+            </div>
+        </div>
+        <div class="content">
+            <div class="container">
+            
+                <div class="item">
+                    <h1>原始圖片</h1>
+                    <img id="preview_progressbarTW_img" src="" />
+                </div>
+                <div class="item">
+                    <h1>去背之後</h1>
+                    <canvas id="canvas"></canvas>
+                </div>
+                
+    
+            </div>
+            <h2 id="save">下載</h2>
+            <a href="" download="去背照請改名" id="save_href">
+                <img src="" id="save_img"/>
+                
+            </a>
+            
+        </div>
+        
+        <div class="footer">
+
+        </div>
+    </div>
+
+
+</body>
+<script>
+    $("#progressbarTWInput").change(function(){
+        
+      readURL(this);
+    
+    });
+     
+    
+    function readURL(input){
+    
+      if(input.files && input.files[0]){
+        
+        var reader = new FileReader();
+    
+        reader.onload = function (e) {
+            
+           $("#preview_progressbarTW_img").attr('src', e.target.result);
+            src = e.target.result;
+            changPic(src);
+        }
+        
+        reader.readAsDataURL(input.files[0]);
+    
+      }
+      
+    }
+    var _canvas=document.getElementById('canvas');
+    var ctx = _canvas.getContext('2d');
+    var img = new Image();
+    img.onload=function(){
+        ctx.canvas.width=img.width;
+        ctx.canvas.height=img.height;
+        draw(this,0,0);
+    };
+    function draw(imgObj,w,h){
+        var x = 0;
+        var y = 0;
+        //先定義圖片的x,p坐標位置
+        ctx.drawImage(imgObj,x,y);
+        //將原始的圖片匯入
+
+        var imgData = ctx.getImageData(x, y, imgObj.width, imgObj.height);
+        //取得canvas物件的資訊(需要完整的坐標及範圍)
+        var data = imgData.data;
+        //再將資訊轉存出來
+        
+        console.log(data);
+        //修改指定顏色 
+        for(var i = 0; i < data.length; i+=4){
+            if(data[i]==$("#r").attr("value") && data[i+1]==$("#g").attr("value") 
+            && data[i+2]==$("#b").attr("value") ){
+                data[i]=$("#r1").attr("value");
+                data[i+1] =$("#g1").attr("value");
+                data[i+2] =$("#b1").attr("value");
+            }
+        }
+        //有透明度的都變透明(刪除浮水印)
+        // for(var i = 0; i < data.length; i+=4){
+        //     if( data[i+3] != $("#a").attr("value")){
+        //         data[i]=$("#r1").attr("value");
+        //         data[i+1] =$("#g1").attr("value");
+        //         data[i+2] =$("#b1").attr("value");
+        //         data[i+3] = $("#a1").attr("value");
+        //     }
+        // }
+        // 只留下一個顏色
+        // for(var i = 0; i < data.length; i+=4){
+        //     if(data[i]!=$("#r").attr("value") && data[i+1]!=$("#g").attr("value") 
+        //     && data[i+2]!=$("#b").attr("value") ){
+        //         data[i]=$("#r1").attr("value");
+        //         data[i+1] =$("#g1").attr("value");
+        //         data[i+2] =$("#b1").attr("value");
+        //         data[i+3] = $("#a1").attr("value");
+        //     }
+        // }
+        //不是固定顏色，有透明的都變全透明
+        // for(var i = 0; i < data.length; i+=4){
+        //     if(data[i]!=$("#r").attr("value") || data[i+1]!=$("#g").attr("value") 
+        //     || data[i+2]!=$("#b").attr("value") || data[i+3] != $("#a").attr("value")){
+        //         data[i]=$("#r1").attr("value");
+        //         data[i+1] =$("#g1").attr("value");
+        //         data[i+2] =$("#b1").attr("value");
+        //         data[i+3] = $("#a1").attr("value");
+        //     }
+        // }
+        ctx.putImageData(imgData,0,0)
+        //重新將新的影像資訊覆蓋上去
+        
+    }
+    function changPic(src){
+        img.src=src;
+
+    }
+
+
+
+
+    var butSave = document.getElementById("save");
+    butSave.onclick=function(){
+        var svaeHref = document.getElementById("save_href");
+        /*
+        * 傳入對應想要儲存的圖片格式的mime型別
+        * 常見：image/png，image/gif,image/jpg,image/jpeg
+        */
+        var img = document.getElementById("save_img");
+        var tempSrc = canvas.toDataURL("image/png");
+        svaeHref.href=tempSrc; 
+        img.src=tempSrc;  
+    }; 
+    
+</script>
+</html>

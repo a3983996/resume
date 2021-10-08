@@ -1,0 +1,265 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+body{
+    background-color: #CCCCCC;
+}
+
+
+.wrap{
+    margin: 0 auto;
+    width: 1000px;
+    background-color: white;
+}
+.fixedtop{
+    position: fixed;
+    width: 1000px;
+    background:#FFFFFF;
+    box-shadow: 0px 1px 3px #DDDDDD;
+}
+.toptab{
+    display: flex;
+    justify-content: flex-end;
+    background-color: #EFEFEF;
+}
+.toptab a{
+    text-decoration: none;
+}
+.toptab .fbcs a{
+    color: #44629D;
+    border-right: 1px solid gray;
+    padding:0 10px 0 0;
+    margin-right: 10px;
+}
+.toptab .twcs a{
+    color: #0FACE9;
+    margin-right: 10px;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.header .theme{
+    background-image: url(../image/logo.png);
+    width: 224px;
+    height: 50px;
+    text-indent: 101%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.header ul{
+    display: flex;
+    align-items: center;
+}
+.header ul li{
+    padding: 16px 0 16px 0;
+    
+}
+.header li a{
+    color:#1ACB9B;
+    text-decoration: none;
+    margin: 0 16px;
+}
+.header .sele{
+    border-bottom: 5px solid #1ACB9B;
+}
+
+
+
+.themepic{
+    background-image: url(../image/banner.png);
+    width: 1002px;
+    height: 346px;
+    display: flex;
+    flex-direction: column;
+}
+.themepic h1{
+    color: white;
+    font-size: 30px;
+    background-color: rgba(0, 0, 0, 0.2);
+    margin-top: 180px;
+    padding: 30px 0 25px 10px;
+    
+}
+
+
+
+.content{
+
+}
+
+.container{
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-around;
+}
+.container .item{
+    width: 270px;
+    box-shadow:0px 3px 3px #DDDDDD;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 16px;
+}
+.container .item h3{
+    font-weight: bold;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container .item p{
+    width: 100%;
+}
+
+.container2{
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container2 h2{
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom:20px;
+}
+
+.container3 form{
+    background:linear-gradient(#045F47,#087459);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+
+}
+.container3 .row{
+    display: flex;
+    justify-content: center;
+    padding: 16px;
+}
+.container3 .col{
+    display: flex;
+    flex-direction: column;
+    padding: 0 0 50px 50px;
+    position: relative;
+}
+.container3 h2{
+    font-size: 24px;
+    font-weight: bold;
+    padding:30px;
+
+}
+.container3 textarea{
+    width:400px;
+    border-radius: 5px;
+    resize: none;
+}
+.container3 input{
+    width: 400px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    line-height: 1.8;
+}
+.container3 .subm{  
+    width: 60px;
+    height: 30px;
+    background-color: #04C491;
+    color:white;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    border:none;
+    border-radius: 5px;
+}
+
+
+
+
+
+table{
+    width: 800px;
+    border-top: 1px solid #BBBBBB;
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin-bottom: 50px;
+}
+tr{
+}
+td{
+    border-bottom: 1px solid #BBBBBB;
+    padding: 10px;
+}
+th{
+    text-align: left;
+    border-bottom: 1px solid #BBBBBB;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.title{
+    background:#EEEEEE;
+}
+.important{
+    color: #49c98f;
+}
+
+
+
+
+
+.footer{
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+}
+.lianluo::after{
+    content: 'asdf@gmail.com';
+    color:red;
+}
+.dianhua::after{
+    content: '0908808808';
+    color:red;
+}
+
+
+

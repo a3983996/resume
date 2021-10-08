@@ -1,0 +1,184 @@
+.projects {
+    display: flex;
+
+    aside {
+        display: flex;
+        position: relative;
+        transition: 0.3s;
+        width: 180px;
+        height: 100%;
+
+        .list {
+            background-color: $gray_6;
+            width: 200px;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            padding-top: 1rem;
+            overflow-y: scroll;
+            .openMethod {
+                width: 100%;
+                position: relative;
+                &:hover .openPagi {
+                    max-height: 1.2rem;
+                }
+                .projectName {
+                    font-family: Arial, Helvetica, sans-serif;
+                    padding: 1rem;
+                    width: 100%;
+                    text-align: center;
+                    font-size: 1.2rem;
+                    cursor: pointer;
+                    color: #555555;
+                    transition: 0.3s;
+                    &:hover {
+                        color: #333333;
+                    }
+                }
+                .openPagi {
+                    display: block;
+                    text-decoration: none;
+                    transition: 0.3s;
+                    max-height: 0;
+                    overflow: hidden;
+                    width: 100%;
+                    font-family: Arial, Helvetica, sans-serif;
+                    padding: 0 1rem;
+                    text-align: center;
+                    font-size: 1.2rem;
+                    cursor: pointer;
+                    color: #555555;
+                    background-color: $gray_4;
+                    &:hover {
+                        background-color: $gray_3;
+                    }
+                }
+            }
+            .active {
+                background-color: $gray_5;
+            }
+        }
+        .prev {
+            img {
+                position: absolute;
+                right: 5px;
+                width: 30px;
+                height: 30px;
+            }
+        }
+        .next {
+            display: none;
+            z-index: 10000;
+            img {
+                position: absolute;
+                right: -30px;
+                width: 30px;
+                height: 30px;
+            }
+        }
+    }
+    .wrap {
+        transition: 0.3s;
+        width: 100%;
+        
+        header {
+            // margin-left: 2rem;
+            background-color: $gray_1;
+            max-height: 200px;
+            overflow: hidden;
+        }
+        main {
+            // height: 100%;
+            iframe {
+                transition: 0.3s;
+                background: transparent;
+                width: 100%;
+                height: 100%;
+            }
+            .manu{
+                max-width: 500px;
+                // height: 100%;
+                h1{
+                    font-size: 2rem;
+                    font-weight: bold;
+                    text-align: center;
+                    padding: 1rem;
+                }
+                p{
+                    font-weight: bold;
+                    letter-spacing: 0.1rem;
+                    line-height: 1.5rem;
+                    padding: 1rem;
+
+                    // word-break: break-all;
+
+                }
+            }
+        }
+    }
+    ::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+        background: $gray_4;
+    }
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        background: #555;
+    }
+}
+@media (max-width: 700px) {
+    .projects {
+        .wrap {
+            header {
+                nav {
+                    .hamberger {
+                        display: block;
+                    }
+                    .menu {
+                        display: block;
+                        position: absolute;
+                        transition: 0.3s;
+                        top: 62px;
+                        max-height: 0px;
+                        overflow: hidden;
+                        z-index: 10000;
+                        li {
+                            background-color: $gray_1;
+                            a {
+                                &:hover {
+                                    color: $gray_6;
+                                }
+                            }
+                            .active {
+                                color: $gray_6;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes hideHeader {
+    to {
+        max-height: 0px;
+    }
+}
+@keyframes showHeader {
+    from {
+        max-height: 0px;
+    }
+    to {
+        max-height: 200px;
+    }
+}

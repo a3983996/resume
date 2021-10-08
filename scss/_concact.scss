@@ -1,0 +1,82 @@
+.concact{
+    display: flex;
+    margin: 2%;
+    flex-wrap: wrap;
+    .yourConcact{
+        padding: 2rem ;
+        flex:1 1 350px;
+        form{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            div{
+                margin-bottom: 1rem;
+                display: flex;
+                width: 100%;
+                label{
+                    font-weight: bold;
+                    font-size: 1.5rem;
+                    margin-right: 1rem;
+                    white-space: nowrap;
+                }
+                input{
+                    background-color: #FFA500;
+                    border: none;
+                    outline: none;
+                    font-size: 1.5rem;
+                    width: 100%;
+
+                }
+                input::-webkit-outer-spin-button,
+                input::-webkit-inner-spin-button {
+                    -webkit-appearance: none;
+                }
+                input[type="number"]{
+                    -moz-appearance: textfield;
+                }
+                textarea{
+                    background-color: #FFA500;
+                    resize: none;
+                    outline: none;
+                    border: none;
+                    font-size: 1.5rem;
+                    width: 100%;
+                }
+            }
+            button{
+                background-color: #FFA500;
+                color: white;
+                border-radius: 5px;
+                border:none;
+                font-size: 1.5rem;
+                padding: 0.3rem 2rem;
+                cursor: pointer;
+                font-weight: bold;
+            }
+            
+        }
+    }
+    .myConcact{
+        border-left: 3px solid gray;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        flex:1 1 350px;
+        justify-content: center;
+        div{
+            display: flex;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+            h3{
+                font-weight: bold;
+                font-size:1.5rem;
+                white-space: nowrap;
+            }
+            p{
+                font-weight: bold;
+                font-size:1.5rem;
+
+            }
+        }
+    }
+}

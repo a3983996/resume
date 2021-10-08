@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/index.css" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <p class="test">123</p>
+    <div id="player"></div>
+    <div class="wrap">
+      <div class="header">
+        <div class="container">
+          <h1 class="logo">
+            <a href="https://www.youtube.com/results?search_query=周杰倫"
+              >Youtube</a
+            >
+          </h1>
+          <div class="search">
+            <input
+              type="text"
+              name="search"
+              placeholder="搜尋"
+              class="seaIn"
+              id="inpu"
+            />
+            <input type="button" value="" class="enter" onclick="getInpu()" />
+            <a
+              href="https://www.youtube.com/results?search_query="
+              id="over"
+            ></a>
+          </div>
+          <img src="image/list.png" alt="" class="list" />
+          <ul>
+            <li><img src="image/video.png" alt="" /></li>
+            <li><img src="image/pixels.png" alt="" /></li>
+            <li><img src="image/alarm.png" alt="" /></li>
+          </ul>
+        </div>
+      </div>
+      <div class="content">
+        <div class="container1">
+          <!-- <ul>
+            <li>
+              <iframe
+                src="https://www.youtube.com/embed/Ao5V8Ryza_k"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </li>
+          </ul> -->
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="js/youtubeAPI.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="網站描述文字" />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="kai" />
+    <link rel="stylesheet" href="css/all.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Document</title>
+    <link rel="shortcut icon" href="" />
+    <link rel="bookmark" href="" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <label for="menu_chebox"
+          ><img class="hamberger" src="image/menu.png" alt="menu"
+        /></label>
+        <input class="open_menu" type="checkbox" id="menu_chebox" />
+        <ul class="menu">
+          <li><a href="index.html">首頁</a></li>
+          <li><a href="resume.html">我的履歷</a></li>
+          <li><a class="active" href="#">聯絡方式</a></li>
+          <li><a href="projects.html">我的作品</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="concact">
+      <div class="yourConcact">
+        <form action="#">
+          <div>
+            <label for="yourName">姓名</label>
+            <input type="text" id="yourName" name="yourName" />
+          </div>
+          <div>
+            <label for="yourEmail">郵件</label>
+            <input type="email" id="yourEmail" name="yourEmail" />
+          </div>
+          <div>
+            <label for="yourTel">電話</label>
+            <input type="number" id="yourTel" name="yourTel" />
+          </div>
+          <div>
+            <label for="yourNeed">需求</label>
+            <textarea name="yourNeed" id="yourNeed" rows="5"></textarea>
+          </div>
+          <button type="submit">交出表單</button>
+        </form>
+      </div>
+      <div class="myConcact">
+        <div>
+          <h3>我的電話:</h3>
+          <p>0908-808-519</p>
+        </div>
+        <div>
+          <h3>我的Email:</h3>
+          <p>a3983996@gmail.com</p>
+        </div>
+        <div>
+          <h3>方便聯絡時間:</h3>
+          <p>周一至周六早上九點到晚上六點</p>
+        </div>
+        <div>
+          <h3>其他聯絡方式:</h3>
+          <p>臉書、IG</p>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="footer-icons">
+        <a
+          class="footer-icon"
+          target="_blank"
+          href="https://www.facebook.com/profile.php?id=100007409281505"
+        >
+          <img
+            src="./image/facebook.svg"
+            alt="facebook"
+            title="facebook page"
+          />
+        </a>
+        <a
+          class="footer-icon"
+          target="_blank"
+          href="https://www.instagram.com/xiaokai0516_/"
+        >
+          <img
+            src="./image/instagram.svg"
+            alt="instagram"
+            title="instagram page"
+          />
+        </a>
+        <a
+          class="footer-icon"
+          target="_blank"
+          href="https://github.com/a3983996"
+        >
+          <img
+            src="./image/github-brands 1.svg"
+            alt="github"
+            title="github page"
+          />
+        </a>
+      </div>
+    </footer>
+    <script src="js/all.js"></script>
+  </body>
+</html>

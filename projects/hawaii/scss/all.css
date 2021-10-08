@@ -1,0 +1,303 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #09969f;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+@font-face {
+  font-family: Qingsong;
+  src: url(../fonts/qingsong.ttf);
+}
+
+body,
+* {
+  font-family: "Qingsong", sans-serif;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 5;
+  box-shadow: 1px 1px 5px #ccc;
+  transition: 0.5s;
+}
+
+header .logo {
+  display: flex;
+  align-items: center;
+  flex: 5 1 400px;
+  margin-left: 2rem;
+  transition: 0.3s;
+  max-height: 300px;
+}
+
+header .logo img {
+  width: 6vw;
+  height: 6vw;
+}
+
+header .logo h1 {
+  font-size: 2rem;
+}
+
+header nav {
+  flex: 1 1 350px;
+}
+
+header nav ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+header nav ul li {
+  display: flex;
+}
+
+header nav ul li a {
+  padding: 1rem 0;
+  text-decoration: none;
+  color: #09969f;
+  font-size: 1.2rem;
+  transition: 0.5s;
+}
+
+main .banner {
+  background-image: url(../image/pexels-photo-416676.jpeg);
+  background-size: cover;
+  width: 100%;
+  height: 90vh;
+  background-position: center center;
+  position: relative;
+  z-index: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main .banner .coverUp {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 90vh;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: -1;
+}
+
+main .banner h2 {
+  color: white;
+  font-size: 4rem;
+  text-align: center;
+  line-height: 5rem;
+}
+
+main .banner .start {
+  color: white;
+  background-color: #33c7cf;
+  border: none;
+  cursor: pointer;
+  border-radius: 1rem;
+  padding: 1rem 2rem;
+  font-size: 1.8rem;
+  margin-top: 2rem;
+  transition: 0.3s;
+}
+
+main .banner .start:hover {
+  transform: scale(1.2);
+}
+
+main .exper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main .exper h2 {
+  text-align: center;
+  font-size: 2rem;
+  padding: 2rem 0;
+  line-height: 3rem;
+}
+
+main .exper h2 span {
+  color: #09969f;
+}
+
+main .exper .items {
+  display: flex;
+  flex-wrap: wrap;
+  width: 90%;
+  padding-bottom: 50px;
+}
+
+main .exper .items .item {
+  padding: 1rem;
+  flex: 1 1 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 75vh;
+  justify-content: space-between;
+}
+
+main .exper .items .item .img-container {
+  width: 15vw;
+  height: 15vw;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+main .exper .items .item .img-container img {
+  width: 15vw;
+  height: 15vw;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+main .exper .items .item .img-container img:hover {
+  transform: scale(1.2);
+}
+
+main .exper .items .item h4 {
+  font-size: 1.8rem;
+}
+
+main .exper .items .item a {
+  color: white;
+  background-color: #097076;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #dddddd;
+}
+
+footer .logo {
+  margin: 1rem 0;
+  display: flex;
+  align-items: center;
+}
+
+footer .logo img {
+  width: 6vw;
+  height: 6vw;
+}
+
+footer .logo h1 {
+  font-size: 2rem;
+}
+
+footer .pagis {
+  display: flex;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+footer .pagis a {
+  flex: 1 1 50px;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-size: 2rem;
+  margin: 0 2rem;
+}
+
+footer .pages {
+  display: flex;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+footer .pages img {
+  width: 6vw;
+  height: 6vw;
+  margin: 0 2rem;
+  flex: 1 1 200px;
+}
+/*# sourceMappingURL=all.css.map */

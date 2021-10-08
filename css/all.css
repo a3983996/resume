@@ -1,0 +1,740 @@
+@charset "UTF-8";
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+.test {
+  z-index: 100;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(https://img.itw01.com/images/2018/08/13/10/1016_6IHFvr_Q267GEZ.gif);
+  width: 100vw;
+  height: 100vh;
+  animation: fill;
+}
+
+.test .layer {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.test .layer p {
+  font-size: 8rem;
+  font-weight: bold;
+  color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-stroke: 3px white;
+  font-family: Arial, Helvetica, sans-serif;
+  transition: 0.3s;
+  text-align: center;
+  position: relative;
+}
+
+.test .layer p:hover {
+  color: white;
+}
+
+.animation {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: orange;
+}
+
+.animation .logo svg {
+  animation: fill 1s ease-in forwards 2.4s;
+}
+
+@media (max-width: 480px) {
+  .animation {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(https://img.itw01.com/images/2018/08/13/10/1016_6IHFvr_Q267GEZ.gif);
+    width: 100%;
+    height: 100vh;
+  }
+  .animation .logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    white-space: nowrap;
+  }
+  .animation .logo .logoName {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .animation .logo .logoBlog {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 20px;
+  }
+  .animation .logo svg {
+    transform: scale(0.5);
+    margin-right: -20px;
+    animation: fill 1s ease-in forwards 2.4s;
+  }
+  .animation .logo svg * {
+    transform: scale(0.5);
+  }
+  .animation .logo .logo1 {
+    margin-right: -40px;
+  }
+}
+
+#one {
+  stroke-dasharray: 547px;
+  stroke-dashoffset: 547px;
+  animation: fadeInside 0.6s ease-in forwards;
+}
+
+#two {
+  stroke-dasharray: 450px;
+  stroke-dashoffset: 450px;
+  animation: fadeInside 0.6s ease-in forwards 0.3s;
+}
+
+#three {
+  stroke-dasharray: 263px;
+  stroke-dashoffset: 263px;
+  animation: fadeInside 0.6s ease-in forwards 0.6s;
+}
+
+#four {
+  stroke-dasharray: 355px;
+  stroke-dashoffset: 355px;
+  animation: fadeInside 0.6s ease-in forwards 0.9s;
+}
+
+#five {
+  stroke-dasharray: 263px;
+  stroke-dashoffset: 263px;
+  animation: fadeInside 0.6s ease-in forwards 1.2s;
+}
+
+#six {
+  stroke-dasharray: 412px;
+  stroke-dashoffset: 412px;
+  animation: fadeInside 0.6s ease-in forwards 1.5s;
+}
+
+#seven {
+  stroke-dasharray: 1411px;
+  stroke-dashoffset: 1411px;
+  animation: fadeInside 0.6s ease-in forwards 1.8s;
+}
+
+#eight {
+  stroke-dasharray: 1467px;
+  stroke-dashoffset: 1467px;
+  animation: fadeInside 0.6s ease-in forwards 2.1s;
+}
+
+#nine {
+  stroke-dasharray: 1224px;
+  stroke-dashoffset: 1224px;
+  animation: fadeInside 0.6s ease-in forwards 2.4s;
+}
+
+@keyframes fadeInside {
+  to {
+    stroke-dashoffset: 0px;
+  }
+}
+
+@keyframes fill {
+  from {
+    fill: transparent;
+  }
+  to {
+    fill: white;
+  }
+}
+
+.projects {
+  display: flex;
+  /* Track */
+  /* Handle */
+  /* Handle on hover */
+}
+
+.projects aside {
+  display: flex;
+  position: relative;
+  transition: 0.3s;
+  width: 180px;
+  height: 100%;
+}
+
+.projects aside .list {
+  background-color: #999999;
+  width: 200px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding-top: 1rem;
+  overflow-y: scroll;
+}
+
+.projects aside .list .openMethod {
+  width: 100%;
+  position: relative;
+}
+
+.projects aside .list .openMethod:hover .openPagi {
+  max-height: 1.2rem;
+}
+
+.projects aside .list .openMethod .projectName {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 1rem;
+  width: 100%;
+  text-align: center;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: #555555;
+  transition: 0.3s;
+}
+
+.projects aside .list .openMethod .projectName:hover {
+  color: #333333;
+}
+
+.projects aside .list .openMethod .openPagi {
+  display: block;
+  text-decoration: none;
+  transition: 0.3s;
+  max-height: 0;
+  overflow: hidden;
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 0 1rem;
+  text-align: center;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: #555555;
+  background-color: #bbbbbb;
+}
+
+.projects aside .list .openMethod .openPagi:hover {
+  background-color: #cccccc;
+}
+
+.projects aside .list .active {
+  background-color: #aaaaaa;
+}
+
+.projects aside .prev img {
+  position: absolute;
+  right: 5px;
+  width: 30px;
+  height: 30px;
+}
+
+.projects aside .next {
+  display: none;
+  z-index: 10000;
+}
+
+.projects aside .next img {
+  position: absolute;
+  right: -30px;
+  width: 30px;
+  height: 30px;
+}
+
+.projects .wrap {
+  transition: 0.3s;
+  width: 100%;
+}
+
+.projects .wrap header {
+  background-color: #eeeeee;
+  max-height: 200px;
+  overflow: hidden;
+}
+
+.projects .wrap main iframe {
+  transition: 0.3s;
+  background: transparent;
+  width: 100%;
+  height: 100%;
+}
+
+.projects .wrap main .manu {
+  max-width: 500px;
+}
+
+.projects .wrap main .manu h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  padding: 1rem;
+}
+
+.projects .wrap main .manu p {
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  line-height: 1.5rem;
+  padding: 1rem;
+}
+
+.projects ::-webkit-scrollbar {
+  width: 5px;
+}
+
+.projects ::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.projects ::-webkit-scrollbar-thumb {
+  background: #bbbbbb;
+}
+
+.projects ::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+@media (max-width: 700px) {
+  .projects .wrap header nav .hamberger {
+    display: block;
+  }
+  .projects .wrap header nav .menu {
+    display: block;
+    position: absolute;
+    transition: 0.3s;
+    top: 62px;
+    max-height: 0px;
+    overflow: hidden;
+    z-index: 10000;
+  }
+  .projects .wrap header nav .menu li {
+    background-color: #eeeeee;
+  }
+  .projects .wrap header nav .menu li a:hover {
+    color: #999999;
+  }
+  .projects .wrap header nav .menu li .active {
+    color: #999999;
+  }
+}
+
+@keyframes hideHeader {
+  to {
+    max-height: 0px;
+  }
+}
+
+@keyframes showHeader {
+  from {
+    max-height: 0px;
+  }
+  to {
+    max-height: 200px;
+  }
+}
+
+.resume table {
+  border-top: 1px solid black;
+  margin: 2%;
+  word-break: break-all;
+  max-width: 600px;
+}
+
+.resume table tr {
+  border-bottom: 1px solid black;
+}
+
+.resume table tr th {
+  padding: 1rem;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.resume table tr td {
+  padding: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.resume table tr td span {
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  margin-right: 0.5rem;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.resume table tr td span i {
+  margin-left: 0.1rem;
+}
+
+.concact {
+  display: flex;
+  margin: 2%;
+  flex-wrap: wrap;
+}
+
+.concact .yourConcact {
+  padding: 2rem;
+  flex: 1 1 350px;
+}
+
+.concact .yourConcact form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.concact .yourConcact form div {
+  margin-bottom: 1rem;
+  display: flex;
+  width: 100%;
+}
+
+.concact .yourConcact form div label {
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-right: 1rem;
+  white-space: nowrap;
+}
+
+.concact .yourConcact form div input {
+  background-color: #FFA500;
+  border: none;
+  outline: none;
+  font-size: 1.5rem;
+  width: 100%;
+}
+
+.concact .yourConcact form div input::-webkit-outer-spin-button,
+.concact .yourConcact form div input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.concact .yourConcact form div input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.concact .yourConcact form div textarea {
+  background-color: #FFA500;
+  resize: none;
+  outline: none;
+  border: none;
+  font-size: 1.5rem;
+  width: 100%;
+}
+
+.concact .yourConcact form button {
+  background-color: #FFA500;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  font-size: 1.5rem;
+  padding: 0.3rem 2rem;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.concact .myConcact {
+  border-left: 3px solid gray;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 350px;
+  justify-content: center;
+}
+
+.concact .myConcact div {
+  display: flex;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.concact .myConcact div h3 {
+  font-weight: bold;
+  font-size: 1.5rem;
+  white-space: nowrap;
+}
+
+.concact .myConcact div p {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+*, body {
+  font-family: "微軟正黑體",Arial, Helvetica, sans-serif;
+}
+
+body {
+  position: relative;
+}
+
+body .backImg {
+  position: absolute;
+  top: -20vh;
+  right: 0;
+  width: auto;
+  height: 120vh;
+  z-index: -1;
+}
+
+header {
+  display: flex;
+}
+
+header nav {
+  display: flex;
+}
+
+header nav .hamberger {
+  display: none;
+  width: 30px;
+  height: 30px;
+  margin: 1rem;
+  cursor: pointer;
+  position: relative;
+}
+
+header nav .open_menu {
+  display: none;
+}
+
+header nav .open_menu:checked ~ .menu {
+  max-height: 300px;
+}
+
+header nav .menu {
+  display: flex;
+}
+
+header nav .menu li {
+  position: relative;
+  display: flex;
+}
+
+header nav .menu li a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.5rem;
+  padding: 1rem 1rem;
+}
+
+header nav .menu li a:hover {
+  color: chocolate;
+}
+
+header nav .menu li .active {
+  color: chocolate;
+}
+
+@media (max-width: 480px) {
+  header nav .hamberger {
+    display: block;
+  }
+  header nav .menu {
+    display: block;
+    position: absolute;
+    transition: 0.3s;
+    top: 62px;
+    max-height: 0px;
+    overflow: hidden;
+  }
+  header nav .menu li {
+    background-color: #eeeeee;
+  }
+  header nav .menu li a:hover {
+    color: #999999;
+  }
+  header nav .menu li .active {
+    color: #999999;
+  }
+}
+
+.myself {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.myself .left {
+  padding: 2rem;
+  flex: 1 1 300px;
+}
+
+.myself .left h1 {
+  font-size: 2.5rem;
+  color: chocolate;
+  margin-bottom: 2rem;
+}
+
+.myself .left p {
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  letter-spacing: 1px;
+}
+
+.myself .right {
+  flex: 1 1 300px;
+  height: 75vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.myself .right .layer {
+  margin-top: 10vh;
+  overflow: hidden;
+  width: 20vw;
+  height: 20vw;
+  border-radius: 50%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 0 5px 1px #ccc;
+}
+
+.myself .right .layer img {
+  width: 15vw;
+}
+
+.myself .right .items {
+  position: relative;
+  margin-top: 2rem;
+  width: 100%;
+}
+
+.myself .right .items .item1 {
+  position: absolute;
+  left: calc(50% - 7rem);
+  top: 0;
+  background-color: #21d0d0;
+  width: 12rem;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.myself .right .items .item1 p {
+  font-size: 2rem;
+}
+
+.myself .right .items .item2 {
+  position: absolute;
+  top: 1rem;
+  left: 50%;
+  width: 8rem;
+  height: 3rem;
+  background-color: #1a9898;
+  z-index: -1;
+}
+
+@media (max-width: 480px) {
+  main .right .layer {
+    width: 30vw;
+    height: 30vw;
+  }
+  main .right .layer img {
+    width: 25vw;
+  }
+}
+
+footer .footer-icons {
+  display: flex;
+  padding-left: 2rem;
+}
+
+footer .footer-icons .footer-icon {
+  text-decoration: none;
+}
+
+footer .footer-icons .footer-icon img {
+  width: 5vw;
+  height: 5vw;
+  margin: 0 1rem 1rem 1rem;
+}
+
+@media (max-width: 480px) {
+  footer .footer-icons .footer-icon img {
+    width: 10vw;
+    height: 10vw;
+  }
+}
+/*# sourceMappingURL=all.css.map */

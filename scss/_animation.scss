@@ -1,0 +1,169 @@
+.test {
+    z-index: 100;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    @include pic-req(
+        // url(https://prd-image-masters.caravan-stories.com.tw/c/sig=1.wJPHhERFgwnK6pqXcpnOuTgK_Pkdv2HcqqPh335P2iM=/caravan-stories/masters/production-tw/attachments/1b21c7fb435b583e0592c03c04df26a9.jpg)
+        url(https://img.itw01.com/images/2018/08/13/10/1016_6IHFvr_Q267GEZ.gif)
+        ,100vw
+        ,100vh
+    );
+    animation: fill;
+
+    .layer {
+        background-color: rgba($color: #ffffff, $alpha: 0.1);
+
+        p {
+            // @include pic-req(url(https://storage.googleapis.com/w3chexschool.appspot.com/images%2F1571301579948y4ie.jpg?GoogleAccessId=firebase-adminsdk-cfcns%40w3chexschool.iam.gserviceaccount.com&Expires=1629648000&Signature=ECpbrdJQFtEcVucVc2yMVJ%2FjfcZrJDapM0UIPShpYu6BqLcK5FD7kYB%2BLjqQB6mYNodIEyVd9se6m9JrzYMZ1KTGGK48xcw9u46cq4NjwcXo1w4oJYjg6qWL35LPFhARJf%2BAgbg9BxECObUWVuQuXPaJ3%2FUFFaDb2wJJ%2Faeuew5B9HeOpEXBkjqGGE5YZEQqcaCA9eKkeJC0K3qmSqzN3rRUkFmgoZmCPgThsWae4hjUbIsIQMy6MNVao%2FLKXQtJJoRQ9VK4RBFoEbHcuIjDjeEBIOwDxEt7rBOsDlf5oLQw120ICAIGR%2FrMmeugiOzIa%2FVbtDsiYHZZctAUzL8Jww%3D%3D), 15vw, 15vw);
+            font-size: 8rem;
+            font-weight: bold;
+            color: transparent;
+            -webkit-background-clip: text;
+            -webkit-text-stroke: 3px white;
+            font-family: Arial, Helvetica, sans-serif;
+            transition: 0.3s;
+            text-align: center;
+            position: relative;
+            &:hover {
+                color: white;
+            }
+        }
+    }
+}
+
+.animation {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: orange;
+    // @include pic-req(
+    // // url(https://prd-image-masters.caravan-stories.com.tw/c/sig=1.wJPHhERFgwnK6pqXcpnOuTgK_Pkdv2HcqqPh335P2iM=/caravan-stories/masters/production-tw/attachments/1b21c7fb435b583e0592c03c04df26a9.jpg)
+    // url(https://img.itw01.com/images/2018/08/13/10/1016_6IHFvr_Q267GEZ.gif)
+    // ,100%
+    // ,100vh
+    // );
+    .logo {
+        svg {
+            animation: fill 1s ease-in forwards 2.4s;
+        }
+    }
+}
+@media (max-width: 480px) {
+    .animation {
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        z-index: 100;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-color: orange;
+        @include pic-req(
+        // url(https://prd-image-masters.caravan-stories.com.tw/c/sig=1.wJPHhERFgwnK6pqXcpnOuTgK_Pkdv2HcqqPh335P2iM=/caravan-stories/masters/production-tw/attachments/1b21c7fb435b583e0592c03c04df26a9.jpg)
+        // url(https://img.itw01.com/images/2018/08/13/10/1016_6IHFvr_Q267GEZ.gif)
+        100%
+        ,100vh
+    );
+
+        .logo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            white-space: nowrap;
+
+            .logoName {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .logoBlog {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-left: 20px;
+            }
+
+            svg {
+                transform: scale(0.5);
+                margin-right: -20px;
+                animation: fill 1s ease-in forwards 2.4s;
+            }
+            svg * {
+                transform: scale(0.5);
+            }
+            .logo1 {
+                margin-right: -40px;
+            }
+        }
+    }
+}
+
+#one {
+    stroke-dasharray: 547px;
+    stroke-dashoffset: 547px;
+    animation: fadeInside 0.6s ease-in forwards;
+}
+#two {
+    stroke-dasharray: 450px;
+    stroke-dashoffset: 450px;
+    animation: fadeInside 0.6s ease-in forwards 0.3s;
+}
+#three {
+    stroke-dasharray: 263px;
+    stroke-dashoffset: 263px;
+    animation: fadeInside 0.6s ease-in forwards 0.6s;
+}
+#four {
+    stroke-dasharray: 355px;
+    stroke-dashoffset: 355px;
+    animation: fadeInside 0.6s ease-in forwards 0.9s;
+}
+#five {
+    stroke-dasharray: 263px;
+    stroke-dashoffset: 263px;
+    animation: fadeInside 0.6s ease-in forwards 1.2s;
+}
+#six {
+    stroke-dasharray: 412px;
+    stroke-dashoffset: 412px;
+    animation: fadeInside 0.6s ease-in forwards 1.5s;
+}
+#seven {
+    stroke-dasharray: 1411px;
+    stroke-dashoffset: 1411px;
+    animation: fadeInside 0.6s ease-in forwards 1.8s;
+}
+#eight {
+    stroke-dasharray: 1467px;
+    stroke-dashoffset: 1467px;
+    animation: fadeInside 0.6s ease-in forwards 2.1s;
+}
+#nine {
+    stroke-dasharray: 1224px;
+    stroke-dashoffset: 1224px;
+    animation: fadeInside 0.6s ease-in forwards 2.4s;
+}
+@keyframes fadeInside {
+    to {
+        stroke-dashoffset: 0px;
+    }
+}
+@keyframes fill {
+    from {
+        fill: transparent;
+    }
+    to {
+        fill: white;
+    }
+}
